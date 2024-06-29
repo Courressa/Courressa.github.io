@@ -28,7 +28,7 @@ h3 {
 
 h2, h3 {
     font-family: "Jaini", "Cambria", system-ui;
-    color: rgb(86, 3, 163);
+    color: rgb(72, 1, 138);
 }
 
 #grid {
@@ -39,13 +39,11 @@ h2, h3 {
         "head head head head head head"
         ". logo logo logo logo ."
         ". intro intro intro intro ."
-        "a a b b c c"
-        "d d e e f f"
-        "footer footer footer footer footer footer"
+        
 
     ;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 6rem 9rem 4fr 1fr 2fr 2fr 4rem;
+    grid-template-rows: 6rem 9rem 4fr 1fr;
     gap: 1rem;
     text-align: center;
     
@@ -88,8 +86,6 @@ nav li a {
 
 /*Banner*/
 
-
-
 header {
     grid-area: head;
     background-color: rgb(178, 100, 250);
@@ -111,16 +107,37 @@ header {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
 }
+
+/* Intro */
+
 .banner-text {
     grid-area: intro;
+    background-color: rgb(200, 149, 247);
+    display: grid;
 }
 
+/* Projects */
 
+.projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 5;
+    grid-column: 1 / span 6;
+    
+}
 
+.projects div {
+    display: grid;
+    background-color: black;
+    color: aliceblue;
+    height: 20rem;
+}
 
 
 /*Temp Ending*/
 
-main {
-    grid-area: footer;
+.thank {
+    grid-row: 6;
+    grid-column: 1 / span 6;
 }
