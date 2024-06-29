@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(234, 214, 253);
+}
+
+h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 4.5rem;
+    color: white; 
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2, h3 {
+    font-family: "Jaini", "Cambria", system-ui;
+    color: rgb(86, 3, 163);
+}
+
+#grid {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "nav nav nav nav nav nav"
+        "head head head head head head"
+        ". logo logo logo logo ."
+        ". intro intro intro intro ."
+        "a a b b c c"
+        "d d e e f f"
+        "footer footer footer footer footer footer"
+
+    ;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 6rem 9rem 4fr 1fr 2fr 2fr 4rem;
+    gap: 1rem;
+    text-align: center;
+    
+}
+
+/*Navigation*/
+
+#grid nav {
+    grid-area: nav;
+    background-color: rgb(42, 4, 78);
+    display: flex;
+    /*justify is for row*/
+    justify-content: space-between; 
+    
+}
+
+nav img {
+    width: 6rem;
+    height: auto;
+    background-color: rgb(247, 240, 253);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+}
+nav li a {
+    text-decoration: none;
+    padding: 2rem;
+    background-color: rgb(250, 234, 11);
+    width: 11rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+/*Banner*/
+
+
+
+header {
+    grid-area: head;
+    background-color: rgb(178, 100, 250);
+    display: grid;
+    align-items:center;
+    
+}
+
+#behind-overlay {
+    grid-area: logo;
+    background-color: rgb(82, 165, 238);
+    background-image: url("./images/bkg1-lavender-field-1031258_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner img {
+    grid-area: logo;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+.banner-text {
+    grid-area: intro;
+}
+
+
+
+
+
+/*Temp Ending*/
+
+main {
+    grid-area: footer;
+}
