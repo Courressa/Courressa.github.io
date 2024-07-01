@@ -31,6 +31,13 @@ h2, h3 {
     color: rgb(72, 1, 138);
 }
 
+p {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 #grid {
     width: 100%;
     display: grid;
@@ -84,6 +91,19 @@ nav li a {
     margin-left: 1rem;
 }
 
+nav li a:hover {
+    font-size: 2.5rem;
+    transition: .3s;
+    padding: 1rem;
+}
+
+nav li a:active {
+    background-color: rgb(255, 248, 148);
+    color: rgb(176, 88, 216);
+    transform: scale(.85);
+    transition: .2s;
+}
+
 /*Banner*/
 
 header {
@@ -119,20 +139,95 @@ header {
 /* Projects */
 
 .projects {
+    color: rgb(240, 240, 240);
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 5;
     grid-column: 1 / span 6;
-    
 }
 
 .projects div {
-    display: grid;
-    background-color: black;
-    color: aliceblue;
+    background-color: rgb(0, 0, 0);
     height: 20rem;
+    overflow-y: scroll;
+/* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.projects div::-webkit-scrollbar {
+    display: none;
+}
+
+
+.projects h3 {
+    position: sticky;
+    top: 0;
+    height: 3rem;
+    background-color: rgb(255, 248, 148);
+}
+
+.projects h3 a {
+    height: 3rem;
+    text-decoration: none;
+    color: rgb(72, 1, 138);
+    transition: 0.5s;
+    background-color: rgb(250, 234, 11);
+    display: inline-flex;
+    min-width: 100%;
+    justify-content: center;
+}
+
+.projects h3 a:after {
+    
+    position: absolute;
+    left: 13rem;
+    opacity: 0;
+    top: 0;
+    right: 10rem;
+    transition: 0.5s;
+}
+
+#proj-1 a:after {
+    content: url('./images/SubButterfly-1.png');
+}
+
+#proj-2 a:after {
+    content: url('./images/SubButterfly-2.png');
+    left: 7rem;
+}
+
+.projects h3 a:hover {
+    padding-right: 6rem;
+    transition: 0.5s;
+}
+
+.projects h3:hover a:after {
+    opacity: 1;
+    right: 0;
+}
+
+.projects h3 a:active {
+    color: rgb(176, 88, 216);
+    transition: 0.2s;
+    background-color: rgb(255, 248, 148);
+    transform: scale(.85);
+}
+
+.projects h3:active {
+    transition: 0.2s;
+    background-color: rgb(255, 248, 148);
+}
+
+
+.projects img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
 
 
 /*Temp Ending*/
