@@ -161,6 +161,9 @@ header {
     display: none;
 }
 
+.projects p {
+    padding: 0 1rem;
+}
 
 .projects h3 {
     position: sticky;
@@ -197,6 +200,21 @@ header {
 #proj-2 a:after {
     content: url('./images/SubButterfly-2.png');
     left: 7rem;
+}
+
+#proj-3 a:after {
+    content: url('./images/SubButterfly-3.png');
+    left: 15rem;
+}
+
+#proj-4 a:after {
+    content: url('./images/SubButterfly-4.png');
+    left: 10rem;
+}
+
+#proj-5 a:after {
+    content: url('./images/SubButterfly-5.png');
+    left: 5rem;
 }
 
 .projects h3 a:hover {
