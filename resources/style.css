@@ -247,10 +247,53 @@ header {
 }
 
 
+/* "Secret" Game */
 
+.play {
+    grid-column: 2 / span 4;
+}
+
+.play h3 {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgb(217, 181, 250);
+}
+
+.play .arrow i {
+    color: rgb(62, 0, 121);
+    font-size: 2.4rem;
+    background-color: rgb(250, 234, 11);
+    padding: 1.5rem 4rem;
+}
+
+.play i:hover {
+    padding: 1.2rem 3.8rem;
+    font-size: 3rem;
+    transition: 0.2s;
+}
+
+.play i:active {
+    padding: 1.7rem 3.6rem;
+    font-size: 1.6rem;
+    background-color: rgb(255, 248, 148);
+    color: rgb(176, 88, 216);
+}
+
+
+#secret-game {
+    display: none;
+    background-color: rgb(106, 32, 175);
+    padding: 20rem 0;
+}
 /*Temp Ending*/
 
 .thank {
     grid-row: 6;
+    grid-column: 1 / span 6;
+}
+
+footer {
+    padding: 3rem;
+    background-color: rgb(42, 4, 78);
     grid-column: 1 / span 6;
 }

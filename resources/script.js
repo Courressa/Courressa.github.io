@@ -1,6 +1,14 @@
-const buttonTest = document.getElementsByClassName('projects');
+let arrow = document.getElementById('down-arrow');
+let game = document.getElementById('secret-game');
 
-const sparkleCreation = document.createElement('div');
+//reveals the "Secret" Game section
+const reveal = () => {
+    if (game.style.display == '' || game.style.display == 'none') {
+        game.style.display = 'block';
+    } else {
+        game.style.display = 'none';
+    }
+    
+}
 
-buttonTest.appendChild(sparkleCreation);
-sparkleCreation.setAttribute('class', 'sparkle')
+arrow.addEventListener('click', reveal);
