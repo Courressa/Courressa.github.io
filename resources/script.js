@@ -18,23 +18,36 @@ arrow.addEventListener('click', reveal);
 
 let initialPosition = 48;
 
-let stopAtEdge = () => {
-    do {
-        initialPosition--
-    } while (initialPosition > 0);
+let stopAtEdgeLeft = () => {
+    if (initialPosition > 18) {
+        initialPosition--;
+        return initialPosition;
+    } else if (initialPosition === 18) {
+        return initialPosition;
+    };
+};
+
+let stopAtEdgeRight = () => {
+    if (initialPosition < 77) {
+        initialPosition++;
+        return initialPosition;
+    } else if (initialPosition === 77) {
+        return initialPosition;
+    };
 };
 
 const movement = (press) => {
-        switch (press.code) {
-            case "ArrowLeft":
-            case "KeyA":
-                butterflyAndBubble.style.left = `${initialPosition--}%`;
-                break;
-            case "ArrowRight":
-            case "KeyD":
-                butterflyAndBubble.style.left = `${initialPosition++}%`;
-                break;
-        }
+    
+    switch (press.code) {
+        case "ArrowLeft":
+        case "KeyA":
+            butterflyAndBubble.style.left = `${stopAtEdgeLeft()}%`;
+            break;
+        case "ArrowRight":
+        case "KeyD":
+            butterflyAndBubble.style.left = `${stopAtEdgeRight()}%`;
+            break;
+    } 
 };
 
 
