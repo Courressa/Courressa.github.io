@@ -282,9 +282,41 @@ header {
 
 #secret-game {
     display: none;
-    background-color: rgb(106, 32, 175);
+    background-color: rgb(173, 116, 226);
     padding: 20rem 0;
+    border: 1.3rem double rgb(81, 0, 128);
+    height: 30rem;
+    width: auto;
 }
+
+#butterfly {
+    background-color: rgba(255, 255, 255, 0.4);
+    /*position: relative;
+    bottom: -20rem;
+    left: 4.218rem;*/
+}
+/*
+#bubble {
+    position: relative;
+    bottom: -20rem;
+    left: -2rem;
+}*/
+
+#butterfly-ingame {
+    position: absolute;
+    bottom: -231%;
+    left: 48%;
+    grid-column: 2 / span 4;
+    
+}
+
+#butterfly-ingame img {
+    border-radius: 50%;
+    width: 6rem;
+    height: auto;
+    position: absolute;
+}
+
 /*Temp Ending*/
 
 .thank {
