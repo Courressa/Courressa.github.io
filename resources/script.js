@@ -25,7 +25,6 @@ let stopAtEdge = () => {
 };
 
 const movement = (press) => {
-    stopAtEdge();
         switch (press.code) {
             case "ArrowLeft":
             case "KeyA":
