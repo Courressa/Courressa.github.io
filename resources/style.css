@@ -26,7 +26,7 @@ h3 {
     font-size: 2rem;
 }
 
-h2, h3 {
+h2, h3, button {
     font-family: "Jaini", "Cambria", system-ui;
     color: rgb(72, 1, 138);
 }
@@ -283,10 +283,13 @@ header {
 #secret-game {
     display: none;
     background-color: rgb(173, 116, 226);
-    padding: 20rem 0;
+    padding: 1rem;
     border: 1.3rem double rgb(81, 0, 128);
-    height: 30rem;
+    height: 45rem;
     width: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
 }
 
 #butterfly {
@@ -304,7 +307,7 @@ header {
 
 #butterfly-ingame {
     position: absolute;
-    bottom: -231%;
+    bottom: -235%;
     left: 48%;
     grid-column: 2 / span 4;
     
@@ -315,6 +318,54 @@ header {
     width: 6rem;
     height: auto;
     position: absolute;
+}
+
+.falling-objects {
+    width: 100px;
+    height: 100px;
+    background: #fd4d3f;
+    border-radius: 100px;
+    transition-property: bottom;
+    transition-duration: 2s;
+    position: absolute;
+    bottom: -183%;
+    
+}
+
+/* use to add clouds in game possibly? Right location for it
+.clouds {
+    width: 100px;
+    height: 100px;
+    background: #fd4d3f;
+    border-radius: 100px;
+    transition-property: bottom;
+    transition-duration: 2s;
+    position: absolute;
+    bottom: -183%;
+    
+}*/
+
+/* Game Button*/
+
+#start-game {
+    display: block;
+    background-color: rgb(250, 234, 11);
+    font-size: 3rem; 
+    padding: 0 2rem;
+    height: 7rem;
+    text-align: center;
+    opacity: 1;
+}
+
+#start-game:hover {
+    font-size: 4rem;
+    transition: 0.2s;
+}
+
+#start-game:active {
+    font-size: 2rem;
+    background-color: rgb(255, 248, 148);
+    color: rgb(176, 88, 216);
 }
 
 /*Temp Ending*/

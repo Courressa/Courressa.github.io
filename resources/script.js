@@ -1,11 +1,12 @@
 let arrow = document.getElementById('down-arrow');
 let game = document.getElementById('secret-game');
 let butterflyAndBubble = document.getElementById('butterfly-ingame');
+let startGame = document.getElementById('start-game');
 
 //reveals the "Secret" Game section
 const reveal = () => {
     if (game.style.display == '' || game.style.display == 'none') {
-        game.style.display = 'flex';
+        game.style.display = 'grid';
     } else {
         game.style.display = 'none';
     }
@@ -52,3 +53,13 @@ const movement = (press) => {
 
 
 document.addEventListener('keydown', movement);
+
+//let objects appear and fall - game start
+
+const start = () => {
+        startGame.style.transition = '1s';
+        startGame.style.fontSize = '1rem';
+        startGame.style.opacity = '0';
+}
+
+startGame.addEventListener('click', start);
