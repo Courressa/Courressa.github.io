@@ -285,19 +285,31 @@ header {
     background-color: rgb(173, 116, 226);
     padding: 1rem;
     border: 1.3rem double rgb(81, 0, 128);
-    height: 45rem;
-    width: auto;
-    overflow: hidden;
     justify-content: center;
     align-content: center;
+    grid-template-columns: repeat(5, 7rem);
+    gap: 0.5rem;
 }
 
-#butterfly {
-    background-color: rgba(255, 255, 255, 0.4);
-    /*position: relative;
-    bottom: -20rem;
-    left: 4.218rem;*/
+.game-area {
+    height: 7rem;
 }
+
+.score {
+    display: none;
+    justify-content: center;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+}
+/*
+#butterfly-in-bubble {
+    
+    position: relative;
+    bottom: -20rem;
+    left: 4.218rem;
+}*/
 /*
 #bubble {
     position: relative;
@@ -305,19 +317,20 @@ header {
     left: -2rem;
 }*/
 
+/*
 #butterfly-ingame {
     position: absolute;
     bottom: -235%;
     left: 48%;
     grid-column: 2 / span 4;
     
-}
+} */
 
-#butterfly-ingame img {
+.butterfly-ingame img {
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     width: 6rem;
     height: auto;
-    position: absolute;
 }
 
 .falling-objects {
@@ -325,10 +338,12 @@ header {
     height: 100px;
     background: #fd4d3f;
     border-radius: 100px;
-    transition-property: bottom;
-    transition-duration: 2s;
+    
+    /*transition-property: bottom;
+    transition-duration: 5s;
     position: absolute;
     bottom: -183%;
+    opacity: 1; */
     
 }
 
