@@ -289,6 +289,7 @@ header {
     align-content: center;
     grid-template-columns: repeat(5, 7rem);
     gap: 0.5rem;
+    overflow: hidden;
 }
 
 .game-area {
@@ -363,13 +364,13 @@ header {
 /* Game Button*/
 
 #start-game {
-    display: block;
+    display: none;
     background-color: rgb(250, 234, 11);
     font-size: 3rem; 
     padding: 0 2rem;
     height: 7rem;
-    text-align: center;
     opacity: 1;
+    
 }
 
 #start-game:hover {
@@ -381,6 +382,22 @@ header {
     font-size: 2rem;
     background-color: rgb(255, 248, 148);
     color: rgb(176, 88, 216);
+}
+
+#game-over {
+    display: none;
+    font-size: 2rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#play-again {
+    display: none;
+    background-color: rgb(250, 234, 11);
+    font-size: 3rem; 
+    padding: 0 2rem;
+    height: 7rem;
 }
 
 /*Temp Ending*/
