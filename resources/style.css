@@ -250,13 +250,28 @@ header {
 /* "Secret" Game */
 
 .play {
+    display: grid;
     grid-column: 2 / span 4;
+    grid-template-areas: 
+    "intro intro intro intro intro"
+        ". . arrow . ."
+        ". . score . ."
+        ". game game game ."
+    ;
+    grid-template-rows: 8rem 8rem 4rem 1fr;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .play h3 {
     margin-top: 2rem;
     padding: 2rem;
     background-color: rgb(217, 181, 250);
+    grid-area: intro;
+}
+
+.arrow {
+    display: grid;
+    grid-area: arrow;
 }
 
 .play .arrow i {
@@ -264,6 +279,7 @@ header {
     font-size: 2.4rem;
     background-color: rgb(250, 234, 11);
     padding: 1.5rem 4rem;
+    height: 5.5rem;
 }
 
 .play i:hover {
@@ -279,17 +295,22 @@ header {
     color: rgb(176, 88, 216);
 }
 
+.game-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
 
 #secret-game {
     display: none;
     background-color: rgb(173, 116, 226);
     padding: 1rem;
     border: 1.3rem double rgb(81, 0, 128);
-    justify-content: center;
-    align-content: center;
     grid-template-columns: repeat(5, 7rem);
     gap: 0.5rem;
     overflow: hidden;
+    grid-area: game;
+    justify-self: center;
 }
 
 .game-area {
@@ -298,11 +319,11 @@ header {
 
 .score {
     display: none;
-    justify-content: center;
-    margin: 2rem 0 0.5rem 0;
+    margin: 0.5rem 0 2rem 0;
     font-size: 2rem;
     color: rgb(62, 0, 121);
     font-family: "Jaini", "Cambria", system-ui;
+    grid-area: score;
 }
 /*
 #butterfly-in-bubble {
@@ -369,8 +390,10 @@ header {
     font-size: 3rem; 
     padding: 0 2rem;
     height: 7rem;
-    opacity: 1;
-    
+    width: 20rem;
+    opacity: 1; 
+    grid-area: game;
+    z-index: 5;
 }
 
 #start-game:hover {

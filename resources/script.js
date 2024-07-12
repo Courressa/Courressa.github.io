@@ -23,9 +23,9 @@ const fallingObjectCreation = '<div class="falling-objects"></div>';
 //reveals the "Secret" Game section
 const reveal = () => {
     if (game.style.display == '' || game.style.display == 'none') {
-        game.style.display = 'inline-grid';
-        score.style.display = 'flex';
-        startButton.style.display = 'block';
+        game.style.display = 'grid';
+        score.style.display = 'grid';
+        startButton.style.display = 'grid';
     } else {
         game.style.display = 'none';
         score.style.display = 'none';
