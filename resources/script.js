@@ -26,6 +26,7 @@ const reveal = () => {
         game.style.display = 'grid';
         score.style.display = 'grid';
         startButton.style.display = 'grid';
+        butterflyArea[2].innerHTML = `${butterflyCreation}`;
     } else {
         game.style.display = 'none';
         score.style.display = 'none';
@@ -106,6 +107,7 @@ const reset = () => {
 const startGame = () => {
     reset();
     loop();
+    startButton.style.display = 'none';
 };
 
 const loop = () => {
@@ -143,9 +145,9 @@ const loop = () => {
 
     //will continue game if there is no collision
     if (stopGame) {
-        gameOverNotice.style.display = 'flex';
+        gameOverNotice.style.display = 'grid';
         scoreNumber;
-        playAgainButton.style.display = 'flex';
+        playAgainButton.style.display = 'grid';
         
     } else {
         dropCount++;
