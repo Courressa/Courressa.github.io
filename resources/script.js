@@ -37,8 +37,9 @@ const reveal = () => {
 arrow.addEventListener('click', reveal);
 
 //moving butterfly
-
+    //keyboard
 const movement = (press) => {
+    
     const butterflyInBubble = document.querySelector('.butterfly-ingame');
 
     if ((press.code === "ArrowLeft" && butterflyArea.includes(butterflyInBubble.parentElement.previousElementSibling)) || (press.code === "KeyA" && butterflyArea.includes(butterflyInBubble.parentElement.previousElementSibling))) {
@@ -48,45 +49,30 @@ const movement = (press) => {
     }
 };
 
+    //click
+const touchMovement = (touch) => {
+    const butterflyInBubble = document.querySelector('.butterfly-ingame');
+    const clientX = touch.pageX;
+    const clientWidth = game.offsetWidth;
+
+    if (clientX < (clientWidth / 2) && butterflyArea.includes(butterflyInBubble.parentElement.previousElementSibling)) {
+        console.log('left'+ clientX);
+        butterflyInBubble.parentElement.previousElementSibling.appendChild(butterflyInBubble);
+        
+    } else if (clientX > (clientWidth / 2) && butterflyInBubble.parentElement.nextElementSibling) {
+        console.log('right' + clientX);
+        butterflyInBubble.parentElement.nextElementSibling.appendChild(butterflyInBubble);
+    } else {
+        console.log('something is wrong' + clientX);
+    };
+
+}
+
 document.addEventListener('keydown', movement);
-/*
-let initialPosition = 48;
-
-let stopAtEdgeLeft = () => {
-    if (initialPosition > 18) {
-        initialPosition--;
-        return initialPosition;
-    } else if (initialPosition === 18) {
-        return initialPosition;
-    };
-};
-
-let stopAtEdgeRight = () => {
-    if (initialPosition < 77) {
-        initialPosition++;
-        return initialPosition;
-    } else if (initialPosition === 77) {
-        return initialPosition;
-    };
-};
-
-const movement = (press) => {
+document.addEventListener('DOMContentLoaded', () => {
     
-    switch (press.code) {
-        case "ArrowLeft":
-        case "KeyA":
-            butterflyAndBubble.style.left = `${stopAtEdgeLeft()}%`;
-            break;
-        case "ArrowRight":
-        case "KeyD":
-            butterflyAndBubble.style.left = `${stopAtEdgeRight()}%`;
-            break;
-    } 
-};
+    document.addEventListener('click', touchMovement)});
 
-
-
-document.addEventListener('keydown', movement);*/
 
 // Reset Game
 
@@ -151,42 +137,6 @@ const loop = () => {
         setTimeout(loop, speed);
     }
 };
-
-/*
-let getStyle = window.getComputedStyle(rain);
-let showStyleValue = getStyle.getPropertyValue('bottom');
-let value = -183;
-
-const rainOpacity = () => {
-    if (value === -248) {
-        value--;
-         rain.style.opacity = '0';
-
-    } else {
-        rain.style.backgroundColor = 'green';
-        rainFall();
-    } 
-
-};
-
-const rainFall = () => {
-    while (value > -247) {
-        value--;  
-    }
-    
-    rain.style.bottom = `${value}%`;
-    rainOpacity();
-};
-
-
-
-const start = () => {
-    startGame.style.transition = '1s';
-    startGame.style.fontSize = '1rem';
-    startGame.style.opacity = '0';
-    rainFall();
-};
-*/
 
 startButton.addEventListener('click', startGame);
 

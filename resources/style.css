@@ -406,7 +406,7 @@ header {
     font-size: 7rem;
     color: rgb(62, 0, 121);
     font-family: "Jaini", "Cambria", system-ui;
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: #FC0 6px 0 10px;
     grid-area: game;
     z-index: 1;
     
