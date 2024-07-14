@@ -4,10 +4,11 @@ const startButton = document.getElementById('start-game');
 const score = document.querySelector('.score');
 const gameOverNotice = document.getElementById('game-over');
 const playAgainButton = document.getElementById('play-again');
-const gameArea = Array.from(document.querySelectorAll('.game-area'))
+const gameArea = Array.from(document.querySelectorAll('.game-area'));
 const fallingObjectsArea = gameArea.slice(0, 25);
 const butterflyArea = gameArea.slice(25);
 const scoreDisplay = document.querySelector('#score-number');
+const instructions = document.querySelector('.game-instructions');
 
 
 let dropCount, speed, scoreNumber;
@@ -25,19 +26,20 @@ const reveal = () => {
         score.style.display = 'grid';
         startButton.style.display = 'grid';
         butterflyArea[2].innerHTML = `${butterflyCreation}`;
+        document.removeEventListener('click', touchMovement);
+        instructions.style.display = 'grid'
     } else {
         game.style.display = 'none';
         score.style.display = 'none';
         startButton.style.display = 'none';
+        instructions.style.display = 'none';
     }; 
-    
-     
 }
 
 arrow.addEventListener('click', reveal);
 
 //moving butterfly
-    //keyboard
+    //-keyboard
 const movement = (press) => {
     
     const butterflyInBubble = document.querySelector('.butterfly-ingame');
@@ -49,7 +51,7 @@ const movement = (press) => {
     }
 };
 
-    //click
+    //-click
 const touchMovement = (touch) => {
     const butterflyInBubble = document.querySelector('.butterfly-ingame');
     const clientX = touch.pageX;
@@ -69,9 +71,7 @@ const touchMovement = (touch) => {
 }
 
 document.addEventListener('keydown', movement);
-document.addEventListener('DOMContentLoaded', () => {
-    
-    document.addEventListener('click', touchMovement)});
+document.addEventListener('DOMContentLoaded', () => {document.addEventListener('click', touchMovement)});
 
 
 // Reset Game
@@ -92,6 +92,8 @@ const startGame = () => {
     reset();
     loop();
     startButton.style.display = 'none';
+    instructions.style.display = 'none';
+    document.addEventListener('click', touchMovement);
 };
 
 const loop = () => {
@@ -148,6 +150,7 @@ const playAgain = () => {
         gameOverNotice.style.display = 'none';
         reset();
         startButton.style.display = 'grid';
+        instructions.style.display ='grid';
     }
 };
 

@@ -53,7 +53,27 @@ p {
     grid-template-rows: 6rem 9rem 4fr 1fr;
     gap: 1rem;
     text-align: center;
-    
+}
+
+@media only screen and (max-width: 580px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: 2rem;
+
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+
+    #grid {
+        grid-template-rows: 4rem 7rem 1.5fr .4fr;
+    }
 }
 
 /*Navigation*/
@@ -64,7 +84,6 @@ p {
     display: flex;
     /*justify is for row*/
     justify-content: space-between; 
-    
 }
 
 nav img {
@@ -104,6 +123,25 @@ nav li a:active {
     transition: .2s;
 }
 
+@media only screen and (max-width: 580px) {
+    nav img {
+        width: 4.3rem;
+    }
+
+    nav li a {
+        padding: 1rem;
+        width: 9rem;
+        font-size: 1.5rem;
+    }
+
+    nav li a:hover {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    
+}
+
+
 /*Banner*/
 
 header {
@@ -126,9 +164,17 @@ header {
     grid-area: logo;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
+    height: 38rem;
 }
 
-/* Intro */
+@media only screen and (max-width: 580px) {
+    .banner img {
+        width: 20rem;
+        height: auto;
+    } 
+}
+
+    /* -Intro */
 
 .banner-text {
     grid-area: intro;
@@ -246,6 +292,12 @@ header {
     margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 580px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* "Secret" Game */
 
@@ -267,6 +319,7 @@ header {
     padding: 2rem;
     background-color: rgb(217, 181, 250);
     grid-area: intro;
+    line-height: 2rem;
 }
 
 .arrow {
@@ -286,6 +339,7 @@ header {
     padding: 1.2rem 3.8rem;
     font-size: 3rem;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .play i:active {
@@ -293,6 +347,14 @@ header {
     font-size: 1.6rem;
     background-color: rgb(255, 248, 148);
     color: rgb(176, 88, 216);
+}
+
+.score {
+    display: none;
+    font-size: 3rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    grid-area: score;
 }
 
 #secret-game {
@@ -311,36 +373,6 @@ header {
     height: 7rem;
 }
 
-.score {
-    display: none;
-    font-size: 3rem;
-    color: rgb(62, 0, 121);
-    font-family: "Jaini", "Cambria", system-ui;
-    grid-area: score;
-}
-/*
-#butterfly-in-bubble {
-    
-    position: relative;
-    bottom: -20rem;
-    left: 4.218rem;
-}*/
-/*
-#bubble {
-    position: relative;
-    bottom: -20rem;
-    left: -2rem;
-}*/
-
-/*
-#butterfly-ingame {
-    position: absolute;
-    bottom: -235%;
-    left: 48%;
-    grid-column: 2 / span 4;
-    
-} */
-
 .butterfly-ingame img {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
@@ -351,27 +383,46 @@ header {
 .falling-objects img {
     width: 6rem;
     height: auto;
-    
-    /*transition-property: bottom;
-    transition-duration: 5s;
-    position: absolute;
-    bottom: -183%;
-    opacity: 1; */
-    
 }
 
-/* use to add clouds in game possibly? Right location for it
-.clouds {
-    width: 100px;
-    height: 100px;
-    background: #fd4d3f;
-    border-radius: 100px;
-    transition-property: bottom;
-    transition-duration: 2s;
-    position: absolute;
-    bottom: -183%;
-    
-}*/
+.game-instructions {
+    grid-area: game;
+    display: none;
+    font-size: 1.5rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    margin-bottom: 3rem;
+    z-index: 1;
+    list-style: inside;
+    padding-top: 2rem;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 580px) {
+    .play h3 {
+        padding-top: 1rem;
+        line-height: 2rem;
+        grid-template-areas: 
+    "intro intro intro intro intro"
+        ". . arrow . ."
+        ". . score . ."
+        "game game game game game"
+    ;
+    }
+
+    .score {
+        font-size: 2rem;
+    }
+
+    #secret-game {
+        grid-template-columns: repeat(5, 5rem);
+        grid-area: game;
+    }
+
+    .game-area {
+        height: 5rem;
+    }
+}
 
 /* Game Button*/
 
@@ -383,10 +434,11 @@ header {
     height: 7rem;
     width: 20rem;
     grid-area: game;
-    z-index: 1;
+    z-index: 2;
     justify-self: center;
     align-self: center;
     align-content: center;
+    cursor: pointer;
 }
 
 #start-game:hover {
@@ -409,12 +461,9 @@ header {
     text-shadow: #FC0 6px 0 10px;
     grid-area: game;
     z-index: 1;
-    
     height: 100%;
     width: auto;
     padding-top: 8rem;
-    
-
 }
 
 #play-again {
@@ -428,6 +477,7 @@ header {
     justify-self: center;
     align-self: center;
     align-content: center;
+    cursor: pointer;
 }
 
 #play-again:hover {
