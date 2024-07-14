@@ -373,7 +373,7 @@ header {
     height: 7rem;
 }
 
-.butterfly-ingame img {
+.butterfly-ingame img, .noBubbleButterfly img {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     width: 6rem;
@@ -388,13 +388,13 @@ header {
 .game-instructions {
     grid-area: game;
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: rgb(62, 0, 121);
     font-family: "Jaini", "Cambria", system-ui;
     margin-bottom: 3rem;
     z-index: 1;
     list-style: inside;
-    padding-top: 2rem;
+    padding-top: 4rem;
     pointer-events: none;
 }
 
@@ -490,6 +490,35 @@ header {
     font-size: 2rem;
     background-color: rgb(255, 248, 148);
     color: rgb(176, 88, 216);
+}
+
+@media only screen and (max-width: 580px) {
+    #start-game {
+        font-size: 2rem;
+        padding: 0 1rem;
+        height: 5rem;
+        width: 15rem;
+    }
+
+    #start-game:hover, #play-again:hover {
+        font-size: 3rem;
+    }
+
+    #game-over {
+        font-size: 4.5rem;
+        padding-top: 3rem;
+    }
+
+    #play-again {
+        font-size: 2rem;
+        padding: 0 1rem;
+        height: 4rem;
+    }
+
+    #play-again:hover {
+        height: 5rem;
+    }
+    
 }
 
 /*Temp Ending*/

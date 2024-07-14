@@ -17,7 +17,7 @@ let dropCount, speed, scoreNumber;
 //Item Creation
 const butterflyCreation = '<div class="butterfly-ingame"><img src="./resources/images/Butterfly-In-Bubble.png" alt="Butterfly In Protective Bubble"></div>';
 const fallingObjectCreation = '<div class="falling-objects"><img src="./resources/images/WaterDrop2.png" alt="Water Droplet"></div>';
-
+const noBubbleButterflyCreation = '<div class="noBubbleButterfly"><img src="./resources/images/Logo-Colour2.png" alt="Butterfly With No Bubble"></div>';
 
 //reveals the "Secret" Game section
 const reveal = () => {
@@ -93,10 +93,14 @@ const startGame = () => {
     loop();
     startButton.style.display = 'none';
     instructions.style.display = 'none';
-    document.addEventListener('click', touchMovement);
+    setTimeout(() => {
+        document.addEventListener('click', touchMovement);
+    }, 300);
+    
 };
 
 const loop = () => {
+    const butterflyInBubble = document.querySelector('.butterfly-ingame');
     let stopGame = false;
 
     for (let i = fallingObjectsArea.length - 1; i >= 0; i--) {
@@ -133,7 +137,7 @@ const loop = () => {
     if (stopGame) {
         gameOverNotice.style.display = 'grid';
         playAgainButton.style.display = 'grid';
-        
+        butterflyInBubble.parentElement.innerHTML = `${noBubbleButterflyCreation}`;
     } else {
         dropCount++;
         setTimeout(loop, speed);
@@ -151,6 +155,7 @@ const playAgain = () => {
         reset();
         startButton.style.display = 'grid';
         instructions.style.display ='grid';
+        document.removeEventListener('click', touchMovement);
     }
 };
 
