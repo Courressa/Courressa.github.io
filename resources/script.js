@@ -1,11 +1,9 @@
 const arrow = document.getElementById('down-arrow');
 const game = document.getElementById('secret-game');
-
 const startButton = document.getElementById('start-game');
 const score = document.querySelector('.score');
 const gameOverNotice = document.getElementById('game-over');
 const playAgainButton = document.getElementById('play-again');
-
 const gameArea = Array.from(document.querySelectorAll('.game-area'))
 const fallingObjectsArea = gameArea.slice(0, 25);
 const butterflyArea = gameArea.slice(25);
@@ -17,7 +15,7 @@ let dropCount, speed, scoreNumber;
 
 //Item Creation
 const butterflyCreation = '<div class="butterfly-ingame"><img src="./resources/images/Butterfly-In-Bubble.png" alt="Butterfly In Protective Bubble"></div>';
-const fallingObjectCreation = '<div class="falling-objects"></div>';
+const fallingObjectCreation = '<div class="falling-objects"><img src="./resources/images/WaterDrop2.png" alt="Water Droplet"></div>';
 
 
 //reveals the "Secret" Game section
@@ -146,7 +144,6 @@ const loop = () => {
     //will continue game if there is no collision
     if (stopGame) {
         gameOverNotice.style.display = 'grid';
-        scoreNumber;
         playAgainButton.style.display = 'grid';
         
     } else {
@@ -194,4 +191,14 @@ const start = () => {
 startButton.addEventListener('click', startGame);
 
 // Play again
-/* reset(); */
+
+const playAgain = () => {
+    if (playAgainButton.style.display === 'grid') {
+        playAgainButton.style.display = 'none';
+        gameOverNotice.style.display = 'none';
+        reset();
+        startButton.style.display = 'grid';
+    }
+};
+
+playAgainButton.addEventListener('click', playAgain);
