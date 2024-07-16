@@ -33,6 +33,8 @@ const reveal = () => {
         score.style.display = 'none';
         startButton.style.display = 'none';
         instructions.style.display = 'none';
+        playAgainButton.style.display = 'none';
+        gameOverNotice.style.display = 'none';
     }; 
 }
 

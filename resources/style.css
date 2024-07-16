@@ -55,6 +55,20 @@ p {
     text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.7rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+
 @media only screen and (max-width: 580px) {
     h1 {
         font-size: 3rem;
@@ -73,6 +87,31 @@ p {
 
     #grid {
         grid-template-rows: 4rem 7rem 1.5fr .4fr;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #grid {
+        gap: 0.5rem;
+        grid-template-rows: 4rem 5rem 1.5fr .4fr;
     }
 }
 
@@ -141,6 +180,19 @@ nav li a:active {
     
 }
 
+@media only screen and (max-width: 430px) {
+    nav li a {
+        width: 7rem;
+        font-size: 1.3rem;
+        margin-left: 0.3rem;
+    }
+
+    nav li a:hover {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+}
 
 /*Banner*/
 
@@ -165,12 +217,31 @@ header {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     height: 38rem;
+    width: auto;
+    
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner img {
+        height: 27rem;
+    }
 }
 
 @media only screen and (max-width: 580px) {
     .banner img {
-        width: 20rem;
-        height: auto;
+        height: 20rem;
+    } 
+}
+
+@media only screen and (max-width: 430px) {
+    .banner img {
+        height: 12.5rem;
     } 
 }
 
@@ -292,6 +363,12 @@ header {
     margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media only screen and (max-width: 580px) {
     .projects {
         grid-template-columns: 1fr;
@@ -398,8 +475,14 @@ header {
     pointer-events: none;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 768px) {
     .play h3 {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .play {
         padding-top: 1rem;
         line-height: 2rem;
         grid-template-areas: 
@@ -421,6 +504,57 @@ header {
 
     .game-area {
         height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .play {
+        grid-template-areas: 
+    "intro intro intro intro intro"
+        ". . arrow . ."
+        ". . score . ."
+        "game game game game game"
+    ;
+    grid-template-rows: 6rem 6rem 2rem 1fr;
+    grid-column: 1 / span 6;
+    }
+
+    .play h3 {
+        padding-top: 0.7rem;
+        line-height: 1.4rem;
+    }
+
+    .play .arrow i {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        height: 4rem;
+    }
+
+    .score {
+        font-size: 1.5rem;
+    }
+
+    #secret-game {
+        grid-template-columns: repeat(5, 3rem);
+        grid-area: game;
+        border: 0.7rem double rgb(81, 0, 128);
+        padding: 0.5rem;
+    }
+
+    .game-area {
+        height: 3rem;
+    }
+
+    .game-instructions {
+        font-size: 1rem;
+        padding: 2rem;
+        line-height: 1.5;
+    }
+
+    .butterfly-ingame img,
+    .noBubbleButterfly img,
+    .falling-objects img {
+        width: 3rem;
     }
 }
 
@@ -492,6 +626,21 @@ header {
     color: rgb(176, 88, 216);
 }
 
+@media only screen and (max-width: 768px) {
+    #game-over {
+        font-size: 5.5rem;
+        padding-top: 5rem;
+    }
+
+    #play-again {
+        font-size: 3rem;
+    }
+
+    #play-again:hover {
+        height: 6rem;
+    }
+}
+
 @media only screen and (max-width: 580px) {
     #start-game {
         font-size: 2rem;
@@ -521,6 +670,33 @@ header {
     
 }
 
+@media only screen and (max-width: 430px) {
+    #start-game {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        height: 3rem;
+        width: 10rem;
+    }
+
+    #start-game:hover, #play-again:hover {
+        font-size: 2rem;
+    }
+
+    #game-over {
+        font-size: 3.5rem;
+    }
+
+    #play-again {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        height: 3rem;
+    }
+
+    #play-again:hover {
+        height: 4rem;
+    }
+}
+
 /*Temp Ending*/
 
 .thank {
@@ -532,4 +708,10 @@ footer {
     padding: 3rem;
     background-color: rgb(42, 4, 78);
     grid-column: 1 / span 6;
+}
+
+@media only screen and (max-width: 580px) {
+    footer {
+        padding: 2rem;
+    }
 }
