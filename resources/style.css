@@ -15,7 +15,7 @@ body {
 h1 {
     font-family: "Poetsen One", sans-serif;
     font-size: 4.5rem;
-    color: white; 
+    color: white;
 }
 
 h2 {
@@ -55,6 +55,12 @@ p {
     text-align: center;
 }
 
+@media only screen and (max-width: 920px) {
+    #grid {
+        grid-template-rows: 6rem 11rem 4fr 1fr;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 3.7rem;
@@ -69,7 +75,7 @@ p {
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
     h1 {
         font-size: 3rem;
         line-height: 1;
@@ -162,7 +168,7 @@ nav li a:active {
     transition: .2s;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
     nav img {
         width: 4.3rem;
     }
@@ -233,7 +239,7 @@ header {
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
     .banner img {
         height: 20rem;
     } 
@@ -287,6 +293,7 @@ header {
     top: 0;
     height: 3rem;
     background-color: rgb(255, 248, 148);
+    width: 100%;
 }
 
 .projects h3 a {
@@ -301,7 +308,6 @@ header {
 }
 
 .projects h3 a:after {
-    
     position: absolute;
     left: 13rem;
     opacity: 0;
@@ -311,7 +317,7 @@ header {
 }
 
 #proj-1 a:after {
-    content: url('./images/SubButterfly-1.png');
+   content: url('./images/SubButterfly-1.png');
 }
 
 #proj-2 a:after {
@@ -363,17 +369,33 @@ header {
     margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
+    .projects h3 {
+        font-size: 1.4rem;
+    }
+
+    .projects h3 a {
+        padding-top: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 860px) {
     .projects {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
     .projects {
         grid-template-columns: 1fr;
     }
+
+    .projects h3 a {
+        padding-top: 0;
+    }
 }
+
+
 
 
 /* "Secret" Game */
@@ -475,13 +497,15 @@ header {
     pointer-events: none;
 }
 
-@media only screen and (max-width: 768px) {
+
+
+@media only screen and (max-width: 860px) {
     .play h3 {
         padding: 1rem;
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
     .play {
         padding-top: 1rem;
         line-height: 2rem;
@@ -520,7 +544,7 @@ header {
     }
 
     .play h3 {
-        padding-top: 0.7rem;
+        padding-top: 1.4rem;
         line-height: 1.4rem;
     }
 
@@ -547,7 +571,7 @@ header {
 
     .game-instructions {
         font-size: 1rem;
-        padding: 2rem;
+        padding: 2rem 5rem;
         line-height: 1.5;
     }
 
@@ -641,7 +665,7 @@ header {
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
     #start-game {
         font-size: 2rem;
         padding: 0 1rem;
@@ -710,7 +734,7 @@ footer {
     grid-column: 1 / span 6;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
     footer {
         padding: 2rem;
     }
