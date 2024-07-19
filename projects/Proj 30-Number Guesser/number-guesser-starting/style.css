@@ -22,9 +22,9 @@ header {
 
 h1 {
   font-family: "Black Ops One", system-ui;
-  font-size: 40px;
-  color: rgb(250, 250, 250);
-  text-shadow: #0000d6 0 6px;
+  font-size: 45px;
+  color: #0000d6;
+  text-shadow: #fafafa 0 6px;
   border-bottom: 10px dotted currentColor;
   border-top: 10px dotted currentColor;
   padding-bottom: 6.5px;
@@ -39,7 +39,7 @@ h1 {
 
 .rounds p, #round-number, #target-number {
   font-family: "Black Ops One", system-ui;
-  color: rgb(255, 255, 255);
+  color: rgb(43, 22, 228);
 }
 
 .round-label {
@@ -107,7 +107,7 @@ h1 {
 
 .human-guess {
   border: 1px solid #09ff00;
-  background-color: #7474fc;
+  background-color: #6565eb;
 }
 
 .guess input {
@@ -192,7 +192,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .instructions {
-  background-color: #536dfd;
+  background-color: #2033a1;
   width: 100%;
   display: flex;
   justify-content: space-around;
