@@ -68,6 +68,7 @@ nextRoundButton.addEventListener('click', () => {
   computerGuessDisplay.innerText = '?';
   computerWinsDisplay.innerText = '';
   guessButton.classList.remove('winning-text');
+  addButton.removeAttribute('disabled');
 });
 
 const addButton = document.getElementById('add');
