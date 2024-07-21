@@ -76,4 +76,7 @@
      </tr>
   </table>
 </div>
+<br>
+<br>
+<p align="center">The lavender flower field image is by <a href="https://pixabay.com/users/anniespratt-4900708/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1031258">Annie Spratt</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1031258">Pixabay.</a></p>
 
