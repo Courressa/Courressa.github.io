@@ -1,0 +1,168 @@
+
+* { 
+    font-family: Verdana;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+input:hover {
+    border-color: aqua;
+    background-color: rgb(223, 247, 255);
+}
+
+/*Header*/
+h1 {
+    padding: 2rem;
+    text-align: center;
+    background-color: purple;
+    color: gold;
+}
+
+.short-portal {
+    padding: 0;
+    font-size: 3.8rem;
+}
+
+.full-portal {
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        padding: 1rem;
+    }
+
+    .short-portal {
+        font-size: 3rem;
+    }
+
+    .full-portal {
+        font-size: 1.5rem;
+    }
+}
+
+/*Navigator*/
+nav ul {
+    margin: 1.25rem;
+    text-align: center;
+}
+
+nav li a{
+    border: 0.5rem double purple;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 2rem;
+    background-color: gold;
+    height: 7.5rem;
+    width: 16.25rem;
+    margin: 0.7rem 1.25rem;
+    color: rgb(140, 18, 255);
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a:hover {
+    background-color: lavender;
+    border-color: gold;
+    color: rgb(68, 1, 68);
+}
+
+@media only screen and (max-width: 600px) {
+    nav li a {
+        font-size: 1rem;
+        padding: 1.5rem;
+        height: 6rem;
+        width: 14rem;
+    }
+}
+
+/*Body*/
+
+body {
+    line-height: 2;
+}
+
+h2 {
+    background-color: purple;
+    color: aliceblue;
+    margin: 2rem 0;
+}
+
+.fillInSection {
+    background-color: lavender;
+    padding: 2rem;
+    margin: 3.2rem 12.5rem;
+    border-radius: 5%;
+}
+
+#login {
+    overflow-x: hidden;
+}
+
+#activate {
+    height: 37.5rem;
+    overflow-y: scroll;
+}
+
+#request-submission {
+    overflow-x: hidden;
+}
+
+@media only screen and (min-width: 1030px) {
+    .fillInSection {
+        margin: 3.2rem 30rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .fillInSection {
+        margin: 3.2rem 1.25rem;
+    }
+
+    textarea {
+        width: 18rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    textarea {
+        width: 12rem;
+    }
+}
+
+/*Submit*/
+
+.button {
+    background-color: gold;
+    padding: 0.7rem;
+    color: purple;
+    font-weight: bold;
+    border-color: white;
+}
+
+/*Footer*/
+
+footer {
+    background-color: purple;
+    color: aliceblue;
+    padding: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+    h3 {
+        font-size: 1.2rem;
+    }
+}
