@@ -1,9 +1,148 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Flutter</title>
+    <link href="./resources/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaini&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40c404fce8.js" crossorigin="anonymous"></script>
+    <script src="./resources/script.js" defer></script>
+  </head>
+  <body>
+      <div id="grid">
+        <nav>
+          <img src="./resources/images/Logo-Colour2.png" alt="Logo/Symbol for project Flutter">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about me.html">About Me</a></li>
+          </ul>
+        </nav>
+        
+          <header>
+            <h1>!Welcome To Project Flutter!</h1>
+          </header>
+          <div id="behind-overlay">
+            <div class="banner">
+              <img src="./resources/images/Logo-Colour.png" alt="Logo/Symbol for project Flutter">
+            </div>
+          </div>
 
-<body>
-  <h1>Courressa</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+          <div class="banner-text">
+            <h2>|| Portfolio Project List ||</h2>
+            <h3>By: Courressa Malcolm</h3>
+          </div>
+          
+          <main class="projects">
+            <section>
+                <h3 id="proj-1"><a href="https://courressa.github.io/SunCon/" target="_blank">SunCon Investment</a></h3> 
+                <img src="./resources/images/Projects Homepage/Suncon.png">
+                <p>HTML, CSS | Visual Studio Code, Inkscape, Chrome DevTools</p>
+                <p>This project was built as a starting point for the company's responsive website. It would house the information about SunCon, the projects that they worked on as well as information about the team members in the company.</p>
+                <br>
+                <p>I created it in Visual Studio Code by using HTML and CSS and the responsiveness was tested by using the Chrome DevTools. I also used Inkscape to create their Logo.</p>
+            </section>
+            
+            <section>
+              <h3 id="proj-2"><a href="./projects/Proj 23-Off-Platform Project- Fotomatic/fotomatic_broken/fotomatic_broken/index.html" target="_blank">Fotomatic</a></h3> 
+              <img src="./resources/images/Projects Homepage/Fotomatic.png">
+              <p>HTML, CSS | Visual Studio Code, Chrome DevTools</p>
+              <p>Project Fotomatic had a broken version of a responsive website which was fixed by following the specs that were provided as a helping guide to make adjustments to the broken code.</p>
+              <br>
+              <p>I updated it's responsiveness in Visual Studio Code by using HTML and CSS and the responsiveness was tested by using the Chrome DevTools.</p>
+            </section>
+
+            <section>
+              <h3 id="proj-3"><a href="./projects/Proj 8-Dasmoto's Arts & Crafts/Off-Platform - Arts & Crafts.html" target="_blank">Dasmoto's Arts & Crafts</a></h3> 
+              <img src="./resources/images/Projects Homepage/Dasmoto's Arts & Crafts.png">
+              <p>HTML, CSS | Visual Studio Code, Chrome DevTools</p>
+              <p>Dasmoto's Arts & Crafts is a fictional arts and crafts store that sells a few types of art supplies. This website's styling (font sizes, colors, etc.) was improved after using the specs that were provided as a base guideline/foundation.</p>
+              <br>
+              <p>I created it in Visual Studio Code by using HTML and CSS. I added a bit of responsiveness and tested it using the Chrome DevTools.</p>
+            </section>
+
+            <section>
+              <h3 id="proj-4"><a href="./projects/Proj 30-Number Guesser/number-guesser-starting/index.html" target="_blank">Number Guesser</a></h3> 
+              <img src="./resources/images/Projects Homepage/Number Guesser.png">
+              <p>JavaScript, HTML, CSS | Visual Studio Code</p>
+              <p>This number guessing game is powered by JavaScript function.</p>
+              <br>
+              <p>This website's game was updated with JavaScript and customized with a bit of HTML and CSS.</p>
+            </section>
+
+            <section>
+              <h3 id="proj-5"><a href="./projects/GAS Portal/Forms - GAS Portal.html" target="_blank">G.A.S.P. Portal</a></h3> 
+              <img src="./resources/images/Projects Homepage/GASP Portal.png">
+              <p>JavaScript, HTML, CSS | Visual Studio Code, Chrome DevTools</p>
+              <p>This G.A.S.P (Gods Academy Student Portal) project is the portal's login page for the fictional Gods Academy School. This is where students can login to the portal, activate their account or submit a request to the school.</p>
+              <br>
+              <p>I created this website in Visual Studio Code by using HTML and CSS and the responsiveness was tested by using the Chrome DevTools. I also used JavaScript to display a message when attempting to submit the forms.</p>
+            </section>
+          </main>
+
+        <!--<div class="thank">
+          <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+        </div> -->
+        <div class="play">
+          <h3>Click The Arrow For The "Not-So-Secret" Secret Game</h3>
+          <div class="arrow"><i id="down-arrow" class="fa-solid fa-angles-down"></i></div>
+          
+          <div class="game-instructions"><h4>Try not to let the rain droplets pop your bubble. Move with: 
+            <ul>
+              <li>Keys: <i class="fa-solid fa-left-long"></i> & <i class="fa-solid fa-right-long"></i> or <i class="fa-solid fa-a"></i> & <i class="fa-solid fa-d"></i></li>
+              <li>Click/Tap</li>
+            </ul>
+          </h4></div>
+          <div class="score">
+              <h4>Score: <strong id="score-number">0</strong></h4>
+          </div>
+          <button id="start-game" type="button">Start Game</button>
+          <div id="game-over">GAME OVER</div>
+          <button id="play-again" type="button">Play Again</button>
+          
+          <div id="secret-game">
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+            <div class="game-area"></div>
+          </div>
+            
+        </div>
+        <footer>
+          <h4>Contact Me</h4>
+            <br>
+            <p><a href="mailto: malcolmcourressa@gmail.com">Email</a></p>
+            <p><a href="https://www.linkedin.com/in/courressamalcolm" target="_blank">Linkedin</a></p>
+        </footer>
+    </div>
+  </body>
 
 </html>

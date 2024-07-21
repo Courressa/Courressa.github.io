@@ -1,0 +1,881 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(234, 214, 253);
+}
+
+h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 4.5rem;
+    color: white;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2, h3, h4, h5, button {
+    font-family: "Jaini", "Cambria", system-ui;
+    color: rgb(72, 1, 138);
+}
+
+p {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#grid {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "nav nav nav nav nav nav"
+        "head head head head head head"
+        ". logo logo logo logo ."
+        ". intro intro intro intro ."
+        
+
+    ;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 6rem 9rem 4fr 1fr;
+    gap: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 948px) {
+    #grid {
+        grid-template-rows: 6rem 11rem 4fr 1fr;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.7rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: 2rem;
+
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+
+    #grid {
+        grid-template-rows: 4rem 7rem 1.5fr .4fr;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #grid {
+        gap: 0.5rem;
+        grid-template-rows: 4rem 5rem 1.5fr .4fr;
+    }
+}
+
+/*Navigation*/
+
+#grid nav {
+    grid-area: nav;
+    background-color: rgb(42, 4, 78);
+    display: flex;
+    /*justify is for row*/
+    justify-content: space-between; 
+}
+
+nav img {
+    width: 6rem;
+    height: auto;
+    background-color: rgb(247, 240, 253);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+}
+nav li a {
+    text-decoration: none;
+    padding: 2rem;
+    background-color: rgb(250, 234, 11);
+    width: 11rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+nav li a:hover {
+    font-size: 2.5rem;
+    transition: .3s;
+    padding: 1rem;
+}
+
+nav li a:active {
+    background-color: rgb(255, 248, 148);
+    color: rgb(176, 88, 216);
+    transform: scale(.85);
+    transition: .2s;
+}
+
+@media only screen and (max-width: 600px) {
+    nav img {
+        width: 4.3rem;
+    }
+
+    nav li a {
+        padding: 1rem;
+        width: 9rem;
+        font-size: 1.5rem;
+    }
+
+    nav li a:hover {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 430px) {
+    nav li a {
+        width: 7rem;
+        font-size: 1.3rem;
+        margin-left: 0.3rem;
+    }
+
+    nav li a:hover {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+}
+
+/*Banner*/
+
+header {
+    grid-area: head;
+    background-color: rgb(178, 100, 250);
+    display: grid;
+    align-items:center;
+    
+}
+
+#behind-overlay {
+    grid-area: logo;
+    background-color: rgb(82, 165, 238);
+    background-image: url("./images/bkg1-lavender-field-1031258_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner img {
+    grid-area: logo;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    height: 38rem;
+    width: auto;
+    
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner img {
+        height: 27rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .banner img {
+        height: 20rem;
+    } 
+}
+
+@media only screen and (max-width: 430px) {
+    .banner img {
+        height: 12.5rem;
+    } 
+}
+
+    /* -Intro */
+
+.banner-text {
+    grid-area: intro;
+    background-color: rgb(200, 149, 247);
+    display: grid;
+}
+
+/* Projects */
+
+.projects {
+    color: rgb(240, 240, 240);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 5;
+    grid-column: 1 / span 6;
+}
+
+.projects div, .projects section {
+    background-color: rgb(0, 0, 0);
+    height: 20rem;
+    overflow-y: scroll;
+/* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.projects div::-webkit-scrollbar {
+    display: none;
+}
+
+.projects p {
+    padding: 0 1rem;
+}
+
+.projects h3 {
+    position: sticky;
+    top: 0;
+    height: 3rem;
+    background-color: rgb(255, 248, 148);
+    width: 100%;
+}
+
+.projects h3 a {
+    height: 3rem;
+    text-decoration: none;
+    color: rgb(72, 1, 138);
+    transition: 0.5s;
+    background-color: rgb(250, 234, 11);
+    display: inline-flex;
+    min-width: 100%;
+    justify-content: center;
+}
+
+.projects h3 a:after {
+    position: absolute;
+    left: 13rem;
+    opacity: 0;
+    top: 0;
+    right: 10rem;
+    transition: 0.5s;
+}
+
+#proj-1 a:after {
+   content: url('./images/SubButterfly-1.png');
+}
+
+#proj-2 a:after {
+    content: url('./images/SubButterfly-2.png');
+    left: 7rem;
+}
+
+#proj-3 a:after {
+    content: url('./images/SubButterfly-3.png');
+    left: 15rem;
+}
+
+#proj-4 a:after {
+    content: url('./images/SubButterfly-4.png');
+    left: 10rem;
+}
+
+#proj-5 a:after {
+    content: url('./images/SubButterfly-5.png');
+    left: 10rem;
+}
+
+.projects h3 a:hover {
+    padding-right: 6rem;
+    transition: 0.5s;
+}
+
+.projects h3:hover a:after {
+    opacity: 1;
+    right: 0;
+}
+
+.projects h3 a:active {
+    color: rgb(176, 88, 216);
+    transition: 0.2s;
+    background-color: rgb(255, 248, 148);
+    transform: scale(.85);
+}
+
+.projects h3:active {
+    transition: 0.2s;
+    background-color: rgb(255, 248, 148);
+}
+
+
+.projects img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .projects h3 {
+        font-size: 1.4rem;
+    }
+
+    .projects h3 a {
+        padding-top: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .projects h3 a {
+        padding-top: 0;
+    }
+}
+
+/* My Info - About Me */
+
+.myInfo {
+    color: rgb(240, 240, 240);
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+        "bio bio bio bio bio bio"
+        ". . selfport selfport . ."
+        ". hobbies hobbies mygames mygames ."
+        ". . resume resume . ."
+    ;
+    grid-row: 5;
+    grid-column: 1 / span 6;
+}
+
+.moreInfo {
+    margin: 1rem 0;
+}
+
+.myInfo p {
+    grid-area: bio;
+    font-size: 1.7rem;
+    margin: 2rem;
+    color: rgb(124, 36, 206);
+    line-height: 1.2;
+}
+
+.moreInfo h3 {
+    background-color: rgb(201, 146, 253);
+}
+
+.moreInfo ul {
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: rgb(118, 35, 196);
+    padding: 0 2.5rem 1rem 2.5rem;
+    font-family: "Bai Jamjuree", sans-serif;
+    line-height: 1.7;
+}
+
+.moreInfo li a, footer p a {
+    color: rgb(250, 234, 11);
+}
+
+.myInfo figure {
+    grid-area: selfport;
+    margin-bottom: 2rem;
+    color: rgb(115, 29, 196);
+}
+
+figure img {
+    width: 37rem;
+    height: 100%;
+}
+
+figcaption {
+    margin: 0 2rem;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+.myHobbies {
+    grid-area: hobbies;
+}
+
+.myGames {
+    grid-area: mygames;
+}
+
+.resume {
+    grid-area: resume;
+}
+
+@media only screen and (max-width: 860px) {
+    .myInfo p {
+        font-size: 1.5rem;
+    }
+
+    figure img {
+        width: 19rem;
+        height: 100%;
+    }
+
+    .moreInfo ul {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .myInfo {
+        grid-template-areas: 
+        "bio"
+        "selfport"
+        "hobbies"
+        "mygames"
+        "resume"
+    ;
+    }
+
+    .myInfo p {
+        font-size: 1.2rem;
+    }
+}
+
+/* "Secret" Game */
+
+.play {
+    display: grid;
+    grid-column: 2 / span 4;
+    grid-template-areas: 
+    "intro intro intro intro intro"
+        ". . arrow . ."
+        ". . score . ."
+        ". game game game ."
+    ;
+    grid-template-rows: 8rem 8rem 4rem 1fr;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.play h3 {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgb(217, 181, 250);
+    grid-area: intro;
+    line-height: 2rem;
+}
+
+.arrow {
+    display: grid;
+    grid-area: arrow;
+}
+
+.play .arrow i {
+    color: rgb(62, 0, 121);
+    font-size: 2.4rem;
+    background-color: rgb(250, 234, 11);
+    padding: 1.5rem 4rem;
+    height: 5.5rem;
+}
+
+.play i:hover {
+    padding: 1.2rem 3.8rem;
+    font-size: 3rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.play i:active {
+    padding: 1.7rem 3.6rem;
+    font-size: 1.6rem;
+    background-color: rgb(255, 248, 148);
+    color: rgb(176, 88, 216);
+}
+
+.score {
+    display: none;
+    font-size: 3rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    grid-area: score;
+}
+
+#secret-game {
+    display: none;
+    background-color: rgb(173, 116, 226);
+    padding: 1rem;
+    border: 1.3rem double rgb(81, 0, 128);
+    grid-template-columns: repeat(5, 7rem);
+    gap: 0.5rem;
+    overflow: hidden;
+    grid-area: game;
+    justify-self: center;
+}
+
+.game-area {
+    height: 7rem;
+}
+
+.butterfly-ingame img, .noBubbleButterfly img {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 6rem;
+    height: auto;
+}
+
+.falling-objects img {
+    width: 6rem;
+    height: auto;
+}
+
+.game-instructions {
+    grid-area: game;
+    display: none;
+    font-size: 1.7rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    margin-bottom: 3rem;
+    z-index: 1;
+    list-style: inside;
+    padding-top: 4rem;
+    pointer-events: none;
+}
+
+
+
+@media only screen and (max-width: 860px) {
+    .play h3 {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .play {
+        padding-top: 1rem;
+        line-height: 2rem;
+        grid-template-areas: 
+    "intro intro intro intro intro"
+        ". . arrow . ."
+        ". . score . ."
+        "game game game game game"
+    ;
+    }
+
+    .score {
+        font-size: 2rem;
+    }
+
+    #secret-game {
+        grid-template-columns: repeat(5, 5rem);
+        grid-area: game;
+    }
+
+    .game-area {
+        height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .play {
+        grid-template-areas: 
+    "intro intro intro intro intro"
+        ". . arrow . ."
+        ". . score . ."
+        "game game game game game"
+    ;
+    grid-template-rows: 6rem 6rem 2rem 1fr;
+    grid-column: 1 / span 6;
+    }
+
+    .play h3 {
+        padding-top: 0.7rem;
+        line-height: 1.4rem;
+    }
+
+    .play .arrow i {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        height: 4rem;
+    }
+
+    .score {
+        font-size: 1.5rem;
+    }
+
+    #secret-game {
+        grid-template-columns: repeat(5, 3rem);
+        grid-area: game;
+        border: 0.7rem double rgb(81, 0, 128);
+        padding: 0.5rem;
+    }
+
+    .game-area {
+        height: 3rem;
+    }
+
+    .game-instructions {
+        font-size: 1rem;
+        padding: 2rem 5rem;
+        line-height: 1.5;
+    }
+
+    .butterfly-ingame img,
+    .noBubbleButterfly img,
+    .falling-objects img {
+        width: 3rem;
+    }
+}
+
+/* Game Button*/
+
+#start-game {
+    display: none;
+    background-color: rgb(250, 234, 11);
+    font-size: 3rem; 
+    padding: 0 2rem;
+    height: 7rem;
+    width: 20rem;
+    grid-area: game;
+    z-index: 2;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+#start-game:hover {
+    font-size: 4rem;
+    transition: 0.2s;
+}
+
+#start-game:active {
+    font-size: 2rem;
+    background-color: rgb(255, 248, 148);
+    color: rgb(176, 88, 216);
+    
+}
+
+#game-over {
+    display: none;
+    font-size: 7rem;
+    color: rgb(62, 0, 121);
+    font-family: "Jaini", "Cambria", system-ui;
+    text-shadow: #FC0 6px 0 10px;
+    grid-area: game;
+    z-index: 1;
+    height: 100%;
+    width: auto;
+    padding-top: 8rem;
+}
+
+#play-again {
+    display: none;
+    background-color: rgb(250, 234, 11);
+    font-size: 3rem; 
+    padding: 0 2rem;
+    height: 5rem;
+    grid-area: game;
+    z-index: 2;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+#play-again:hover {
+    font-size: 4rem;
+    transition: 0.2s;
+    height: 7rem;
+}
+
+#play-again:active {
+    font-size: 2rem;
+    background-color: rgb(255, 248, 148);
+    color: rgb(176, 88, 216);
+}
+
+@media only screen and (max-width: 768px) {
+    #game-over {
+        font-size: 5.5rem;
+        padding-top: 5rem;
+    }
+
+    #play-again {
+        font-size: 3rem;
+    }
+
+    #play-again:hover {
+        height: 6rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #start-game {
+        font-size: 2rem;
+        padding: 0 1rem;
+        height: 5rem;
+        width: 15rem;
+    }
+
+    #start-game:hover, #play-again:hover {
+        font-size: 3rem;
+    }
+
+    #game-over {
+        font-size: 4.5rem;
+        padding-top: 3rem;
+    }
+
+    #play-again {
+        font-size: 2rem;
+        padding: 0 1rem;
+        height: 4rem;
+    }
+
+    #play-again:hover {
+        height: 5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 430px) {
+    #start-game {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        height: 3rem;
+        width: 10rem;
+    }
+
+    #start-game:hover, #play-again:hover {
+        font-size: 2rem;
+    }
+
+    #game-over {
+        font-size: 3.5rem;
+    }
+
+    #play-again {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        height: 3rem;
+    }
+
+    #play-again:hover {
+        height: 4rem;
+    }
+}
+
+/* Thanks For Visiting */
+
+.thank {
+    grid-row: 6;
+    grid-column: 1 / span 6;
+    margin: 2rem 0;
+}
+
+.thank img {
+    width: 25rem;
+    height: 100%;
+    border: 1.3rem double rgb(81, 0, 128);
+}
+
+@media only screen and (max-width: 600px) {
+    .thank img {
+        width: 17rem;
+    }
+}
+
+/* Footer */
+
+footer {
+    margin-top: 2rem;
+    padding: 3rem;
+    background-color: rgb(42, 4, 78);
+    grid-column: 1 / span 6;
+}
+
+footer h4 {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    letter-spacing: 0.1rem;
+}
+
+footer p {
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        padding: 2rem;
+    }
+
+    footer h4 {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+}

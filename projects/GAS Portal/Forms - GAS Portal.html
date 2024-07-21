@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GAS Portal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./style.css" rel="stylesheet">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="short-portal">G.A.S.P</h1>
+            <h1 class="full-portal">Gods Academy Student Portal </h1>
+            <nav>
+                <ul>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#activate">Activate Account</a></li>
+                    <li><a href="#request-submission">Submit A Request</a></li>
+                </ul>
+            </nav>
+    
+        </header>
+        <main>
+            <!--action attribute is where the info is sent-->
+            <div id="login" class="fillInSection">
+                <form action="#" method="POST">
+                    <h2>Login To Your G.A.S.P</h2>
+                    <section class="login">
+                        <p></p>
+                        <label for="username">Username</label>
+                        <br>
+                        <input type="text" name="username" id="username" minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+" placeholder="NetID" required>
+                        <br>
+                        <br>
+                        <label for="user-password">Password:</label>
+                        <br>
+                        <input id="user-password" type="password" name="user-password" minlength="8" maxlength="32" required>
+                        <br>
+                        <br>
+                        <input class="button" type="submit" value="Login" id="loginSubmit">
+                    </section>
+                </form>
+            </div>
+
+            <hr>
+            
+            <div id="activate" class="fillInSection">
+                <form action="#" method="POST">
+                    <h2>First Time Student?</h2>
+                    <p>Fill in the information below to activate your GAS (God Academy Student) account. All information can be found in your acceptance letter sent to your personal email.</p>
+                    <p>Can't find your acceptance letter? Contact the Admissions office at 777-777-7777 or email admissions@godsacademy.edu</p>
+                    <h2>Activate Your G.A.S Account</h2>
+                    <section class="activate"> <!--The range attribute in input can add a slider-->
+                        <section class="status">
+                            <label for="studentstatus">Student Status</label>
+                            <br>
+                            <span>New Student</span>
+                            <input id="studentstatus" type="range" name="status" min="0" max="1" step="1">
+                            <span>Returning Student</span>
+                        </section>
+
+                        <br>
+                    
+                        <section class="birthday">
+                            <label for="birthdateM" for=" birthdateD" for="birthdateY">Date of Birth</label>
+                            <br>    
+                            <input id="birthdateM" type="number" name="DOB-month" min="1" max="12" placeholder="MM" required>
+                            <input id="birthdateD" type="number" name="DOB-day" min="1" max="31" placeholder="DD" required>
+                            <input id="birthdateY" type="number" name="DOB-year" placeholder="YYYY" pattern="[0-9]4" required>
+                        </section>
+
+                        <br>
+
+                        <section>
+                            <label for="netid">NetID</label>
+                            <br>
+                            <small>(Format: NetID-XXXXX')</small>
+                            <br>
+                            <input id="netid" type="text" name="NetID" value="NetID-" minlength="9" maxlength="15" pattern="[NetID-][a-zA-Z0-9]+" required>
+                            <br>
+                            <br>
+                            <label for="id#">Student ID</label>
+                            <br>
+                            <input id="id#" type="number" name="ID#" required>
+                            <br>
+                            <br>
+                            <label for="accepted">Acceptance Date</label>
+                            <br>
+                            <input id="accepted" type="date" name="accepted" required>
+                            <br>
+                            <br>
+                            <label for="personal email">Personal Email</label>
+                            <br>
+                            <input id="personal email" type="text" name="personal email" required>
+                            <br>
+                            <br>
+                            <label for="send email">(Optional) Send GAS notifications to personal email as well.</label>
+                            <input id="send email" type="checkbox" name="send email" value="send email">
+                            <br>
+                            <br>
+                        </section>
+
+                        <section class="Core Element">
+                            <label for="element">What is your Core Element?</label>
+                            <select id="element" name="element" required>
+                                <option value="air">Air</option>
+                                <option value="water">Water</option>
+                                <option value="earth">Earth</option>
+                                <option value="fire">Fire</option>
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </section>
+                        
+                        <br>
+
+                        <section class="residency">
+                            <label for="region">What region do you reside in?</label>
+                            <!--To associate a <datalist> element with the <input> element, the <input>‘s 
+                                list attribute value must match the id of the <datalist> element.-->
+                            <input id="region" type="text" list="regions" name="region">
+                            <datalist id="regions" aria-required="true">
+                                <option value="Alurek"></option>
+                                <option value="Croston"></option>
+                                <option value="Marfor"></option>
+                                <option value="Lynx"></option>
+                                <option value="Reston"></option>
+                                <option value="Zi"></option>
+                                <option value="Seyon"></option>
+                                <option value="Farnrow"></option>
+                                <option value="Lurax"></option>
+                                <option value="Amstat"></option>
+                                <option value="Szeron"></option>
+                                <option value="Morthrin"></option>
+                                <option value="Nour"></option>
+                                <option value="Braltinionez"></option>
+                                <option value="Dax"></option>
+                                <option value="Xynrosternia"></option>
+                            </datalist>
+                        </section>
+
+                        <section class="terms and condition">
+                            <p>I have read and agreed with the
+                                <a href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/" target="_blank">terms & conditions</a>
+                                for the Gods Academy Student (GAS) Portal.
+                            </p>
+                            <label for="disagree">Disagree</label>
+                            <input id="disagree" type="radio" name="terms&conditions" value="disagree">
+                            <label for="agree">Agree</label>
+                            <input id="agree" type="radio" name="terms&conditions" value="agree" required>
+                        </section>
+
+                        <br>
+
+                        <section class="submit">
+                            <input class="button" type="submit" value="Activate" id="activateSubmit">
+                        </section>
+                    </section>
+                </form>
+            </div>
+
+            <hr>
+            
+            <div id="request-submission" class="fillInSection">
+                <form action="#" method="POST">
+                    <section class="request submission">
+                        <h2>Submit A Request</h2>
+                        <label for="name">Name</label>
+                        <br>
+                        <input id="name" type="text" placeholder="First and Last Name" required>
+                        <br>
+                        <br>
+                        <label class="id#">Student ID</label>
+                        <br>
+                        <input id="id#" type="number" name="ID#" placeholder="ID #" required>
+                        <br>
+                        <br>
+                        <label for="request">What would you like to request?</label>
+                        <br>
+                        <textarea id="request" name="request" rows="5" cols="40" minlength="5" maxlength="250" required>Type your request here.
+                        </textarea>
+                        <br>
+                        <br>
+                        <input class="button" type="submit" id="requestSubmit">
+                    </section>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <br>
+            <h3>Activating account issues or unaware of NetID?</h3>
+                <p>Contact the Admissions office at 777-777-7777 or admissions@godsacademy.edu.</p>
+            <br>
+            <h3>Forgot password or unable to reset our password?</h3>
+                <p>Contact the helpdesk at 777-777-7771 or helpdesk@godsacademy.edu.</p>
+            <br>
+            <h3>GAS Portal</h3>
+                <p><a href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/" target="_blank">
+                    terms & conditions
+                </a></p>
+                
+        </footer>
+    </body>
+</html>
+
