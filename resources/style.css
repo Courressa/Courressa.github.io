@@ -407,7 +407,6 @@ header {
     gap: 1rem;
     grid-template-areas: 
         "bio bio bio bio bio bio"
-        ". . selfport selfport . ."
         ". hobbies hobbies mygames mygames ."
         ". . resume resume . ."
     ;
@@ -419,12 +418,16 @@ header {
     margin: 1rem 0;
 }
 
-.myInfo p {
+.paragAndPic {
     grid-area: bio;
+}
+
+.myInfo p {
     font-size: 1.7rem;
     margin: 2rem;
-    color: rgb(124, 36, 206);
+    background-color: rgb(118, 35, 196);
     line-height: 1.2;
+    padding: 2rem;
 }
 
 .moreInfo h3 {
@@ -444,20 +447,11 @@ header {
     color: rgb(250, 234, 11);
 }
 
-.myInfo figure {
-    grid-area: selfport;
+.paragAndPic img {
+    border: 1.3rem double rgb(81, 0, 128);
     margin-bottom: 2rem;
-    color: rgb(115, 29, 196);
-}
-
-figure img {
-    width: 37rem;
-    height: 100%;
-}
-
-figcaption {
-    margin: 0 2rem;
-    font-family: "Bai Jamjuree", sans-serif;
+    width: 30%;
+    height: auto;
 }
 
 .myHobbies {
@@ -477,13 +471,14 @@ figcaption {
         font-size: 1.5rem;
     }
 
-    figure img {
-        width: 19rem;
-        height: 100%;
-    }
-
     .moreInfo ul {
         font-size: 1rem;
+    }
+
+    .paragAndPic img {
+        border: 1rem double rgb(81, 0, 128);
+        width: 50%;
+        margin-bottom: 0rem;
     }
 }
 
@@ -500,6 +495,10 @@ figcaption {
 
     .myInfo p {
         font-size: 1.2rem;
+    }
+
+    .paragAndPic img {
+        width: 70%;
     }
 }
 
@@ -843,6 +842,7 @@ figcaption {
 @media only screen and (max-width: 600px) {
     .thank img {
         width: 17rem;
+        border: 1rem double rgb(81, 0, 128);
     }
 }
 
@@ -856,7 +856,7 @@ footer {
 }
 
 footer h4 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: whitesmoke;
     letter-spacing: 0.1rem;
 }
@@ -868,11 +868,11 @@ footer p {
 
 @media only screen and (max-width: 600px) {
     footer {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     footer h4 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     footer p {
