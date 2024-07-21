@@ -55,9 +55,13 @@ p {
     text-align: center;
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 948px) {
     #grid {
         grid-template-rows: 6rem 11rem 4fr 1fr;
+    }
+
+    h1 {
+        font-size: 4rem;
     }
 }
 
@@ -337,7 +341,7 @@ header {
 
 #proj-5 a:after {
     content: url('./images/SubButterfly-5.png');
-    left: 5rem;
+    left: 10rem;
 }
 
 .projects h3 a:hover {
@@ -447,7 +451,7 @@ header {
 }
 
 figure img {
-    width: 27rem;
+    width: 37rem;
     height: 100%;
 }
 

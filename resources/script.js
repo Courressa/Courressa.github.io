@@ -27,7 +27,7 @@ const reveal = () => {
         startButton.style.display = 'grid';
         butterflyArea[2].innerHTML = `${butterflyCreation}`;
         document.removeEventListener('click', touchMovement);
-        instructions.style.display = 'grid'
+        instructions.style.display = 'grid';
     } else {
         game.style.display = 'none';
         score.style.display = 'none';
