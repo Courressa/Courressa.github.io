@@ -26,7 +26,7 @@ h3 {
     font-size: 2rem;
 }
 
-h2, h3, button {
+h2, h3, h4, h5, button {
     font-family: "Jaini", "Cambria", system-ui;
     color: rgb(72, 1, 138);
 }
@@ -270,7 +270,7 @@ header {
     grid-column: 1 / span 6;
 }
 
-.projects div {
+.projects div, .projects section {
     background-color: rgb(0, 0, 0);
     height: 20rem;
     overflow-y: scroll;
@@ -395,8 +395,109 @@ header {
     }
 }
 
+/* My Info - About Me */
 
+.myInfo {
+    color: rgb(240, 240, 240);
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+        "bio bio bio bio bio bio"
+        ". . selfport selfport . ."
+        ". hobbies hobbies mygames mygames ."
+        ". . resume resume . ."
+    ;
+    grid-row: 5;
+    grid-column: 1 / span 6;
+}
 
+.moreInfo {
+    margin: 1rem 0;
+}
+
+.myInfo p {
+    grid-area: bio;
+    font-size: 1.7rem;
+    margin: 2rem;
+    color: rgb(124, 36, 206);
+    line-height: 1.2;
+}
+
+.moreInfo h3 {
+    background-color: rgb(201, 146, 253);
+}
+
+.moreInfo ul {
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: rgb(118, 35, 196);
+    padding: 0 2.5rem 1rem 2.5rem;
+    font-family: "Bai Jamjuree", sans-serif;
+    line-height: 1.7;
+}
+
+.moreInfo li a, footer p a {
+    color: rgb(250, 234, 11);
+}
+
+.myInfo figure {
+    grid-area: selfport;
+    margin-bottom: 2rem;
+    color: rgb(115, 29, 196);
+}
+
+figure img {
+    width: 27rem;
+    height: 100%;
+}
+
+figcaption {
+    margin: 0 2rem;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+.myHobbies {
+    grid-area: hobbies;
+}
+
+.myGames {
+    grid-area: mygames;
+}
+
+.resume {
+    grid-area: resume;
+}
+
+@media only screen and (max-width: 860px) {
+    .myInfo p {
+        font-size: 1.5rem;
+    }
+
+    figure img {
+        width: 19rem;
+        height: 100%;
+    }
+
+    .moreInfo ul {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .myInfo {
+        grid-template-areas: 
+        "bio"
+        "selfport"
+        "hobbies"
+        "mygames"
+        "resume"
+    ;
+    }
+
+    .myInfo p {
+        font-size: 1.2rem;
+    }
+}
 
 /* "Secret" Game */
 
@@ -544,7 +645,7 @@ header {
     }
 
     .play h3 {
-        padding-top: 1.4rem;
+        padding-top: 0.7rem;
         line-height: 1.4rem;
     }
 
@@ -721,21 +822,56 @@ header {
     }
 }
 
-/*Temp Ending*/
+/* Thanks For Visiting */
 
 .thank {
     grid-row: 6;
     grid-column: 1 / span 6;
+    margin: 2rem 0;
 }
 
+.thank img {
+    width: 25rem;
+    height: 100%;
+    border: 1.3rem double rgb(81, 0, 128);
+}
+
+@media only screen and (max-width: 600px) {
+    .thank img {
+        width: 17rem;
+    }
+}
+
+/* Footer */
+
 footer {
+    margin-top: 2rem;
     padding: 3rem;
     background-color: rgb(42, 4, 78);
     grid-column: 1 / span 6;
 }
 
+footer h4 {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    letter-spacing: 0.1rem;
+}
+
+footer p {
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
 @media only screen and (max-width: 600px) {
     footer {
         padding: 2rem;
+    }
+
+    footer h4 {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.85rem;
     }
 }
