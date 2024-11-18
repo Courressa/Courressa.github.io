@@ -344,6 +344,11 @@ header {
     left: 10rem;
 }
 
+#proj-6 a:after {
+    content: url('./images/SubButterfly-6.png');
+    left: 7rem;
+}
+
 .projects h3 a:hover {
     padding-right: 6rem;
     transition: 0.5s;
