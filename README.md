@@ -14,7 +14,8 @@
 
 <p align="center">This displays a few of my projects I worked on as well as a bit of information about myself all through its <a href="https://courressa.github.io/">responsive website</a>.</p>
 
-![Homepage for Project Flutter](https://github.com/user-attachments/assets/42e6d08a-a13d-4c59-a699-a86aa3475c06)
+![Homepage for Project Flutter](https://github.com/user-attachments/assets/50efc872-379e-4f52-95ed-e4907961128e)
+
 
 
 <br>
