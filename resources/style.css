@@ -222,35 +222,50 @@ header {
     border-radius: 1rem;
 }
 
-.banner img {
+.banner {
     grid-area: logo;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     height: 38rem;
+    width: 38rem;
+    justify-self: center;
+}
+
+.banner img {
+    height: 38rem;
     width: auto;
-    
+    animation: 3s linear 0s infinite rotate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(360deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
 }
 
 @media only screen and (max-width: 1024px) {
-    .banner img {
+    .banner, .banner img {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .banner img {
+    .banner, .banner img {
         height: 27rem;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .banner img {
+    .banner, .banner img {
         height: 20rem;
     } 
 }
 
 @media only screen and (max-width: 430px) {
-    .banner img {
+    .banner, .banner img {
         height: 12.5rem;
     } 
 }
