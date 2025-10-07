@@ -216,7 +216,7 @@ header {
 
 #behind-overlay {
     grid-area: logo;
-    background-image: url("./images/bkg1-lavender-field-1031258_1920.jpg");
+    background-image: url("./images/bkg1-lavender-field-large.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1rem;
@@ -250,18 +250,30 @@ header {
     .banner, .banner img {
         width: 100%;
     }
+
+    #behind-overlay {
+        background-image: url("./images/bkg1-lavender-field-medium.jpg");
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .banner, .banner img {
         height: 27rem;
     }
+
+    #behind-overlay {
+        background-image: url("./images/bkg1-lavender-field-small.jpg");
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .banner, .banner img {
         height: 20rem;
-    } 
+    }
+
+    #behind-overlay {
+        background-image: url("./images/bkg1-lavender-field-xsmall.jpg");
+    }
 }
 
 @media only screen and (max-width: 430px) {
