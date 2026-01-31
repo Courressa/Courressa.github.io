@@ -17,7 +17,7 @@ let dropCount, speed, scoreNumber;
 //Item Creation
 const butterflyCreation = '<div class="butterfly-ingame"><img src="./resources/images/Butterfly-In-Bubble.png" alt="Butterfly In Protective Bubble"></div>';
 const fallingObjectCreation = '<div class="falling-objects"><img src="./resources/images/WaterDrop2.png" alt="Water Droplet"></div>';
-const noBubbleButterflyCreation = '<div class="noBubbleButterfly"><img src="./resources/images/Logo-Colour2.png" alt="Butterfly With No Bubble"></div>';
+const noBubbleButterflyCreation = '<div class="noBubbleButterfly"><img src="./resources/images/Logo-Colour2-medium.png" alt="Butterfly With No Bubble"></div>';
 
 //reveals the "Secret" Game section
 const reveal = () => {
