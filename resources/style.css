@@ -446,6 +446,10 @@ header {
     .projects h3 a {
         padding-top: 0;
     }
+
+    .github a {
+        font-size: 1.2rem;
+    }
 }
 
 /* My Info - About Me */
