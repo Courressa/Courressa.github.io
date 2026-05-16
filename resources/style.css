@@ -317,6 +317,21 @@ header {
     display: none;
 }
 
+.github a {
+    height: 3rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: rgb(72, 1, 138);
+    transition: 0.5s;
+    background-color: rgb(250, 234, 11);
+    width: 30%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
 .projects p {
     padding: 0 1rem;
 }
