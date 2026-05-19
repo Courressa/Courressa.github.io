@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
   menuToggle.addEventListener('click', function() {
     mobileMenu.classList.toggle('active');
     
+    //Change icon to X when open
     const icon = menuToggle.querySelector('i');
     if (mobileMenu.classList.contains('active')) {
       icon.classList.remove('fa-bars');
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Optional: Close menu when clicking a link
+  //Close menu when clicking a link
   document.querySelectorAll('.mobile-links a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
