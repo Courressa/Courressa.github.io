@@ -10,6 +10,35 @@ const butterflyArea = gameArea.slice(25);
 const scoreDisplay = document.querySelector('#score-number');
 const instructions = document.querySelector('.game-instructions');
 
+//Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+    
+    const icon = menuToggle.querySelector('i');
+    if (mobileMenu.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-xmark');
+    } else {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+  // Optional: Close menu when clicking a link
+  document.querySelectorAll('.mobile-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    });
+  });
+});
+
 
 let dropCount, speed, scoreNumber;
 
