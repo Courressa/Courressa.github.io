@@ -86,20 +86,29 @@ const movement = (press) => {
     //-click
 const touchMovement = (touch) => {
     const butterflyInBubble = document.querySelector('.butterfly-ingame');
-    const clientX = touch.pageX;
-    const clientWidth = game.offsetWidth;
+    if (!butterflyInBubble) return;
 
-    if (clientX < (clientWidth / 2) && butterflyArea.includes(butterflyInBubble.parentElement.previousElementSibling)) {
-        console.log('left'+ clientX);
-        butterflyInBubble.parentElement.previousElementSibling.appendChild(butterflyInBubble);
-        
-    } else if (clientX > (clientWidth / 2) && butterflyInBubble.parentElement.nextElementSibling) {
-        console.log('right' + clientX);
-        butterflyInBubble.parentElement.nextElementSibling.appendChild(butterflyInBubble);
-    } else {
-        console.log('something is wrong' + clientX);
-    };
+    const gameRect = game.getBoundingClientRect();
+    const clickX = touch.clientX - gameRect.left;
+    const gameWidth = gameRect.width;
+    const currentCell = butterflyInBubble.parentElement;
 
+    if (clickX < (gameWidth / 2)) {
+        // Try to move LEFT, but only within butterflyArea
+        const prevCell = currentCell.previousElementSibling;
+        if (prevCell && butterflyArea.includes(prevCell)) {
+            console.log('Moved LEFT');
+            prevCell.appendChild(butterflyInBubble);
+        }
+    } 
+    else {
+        // Try to move RIGHT, but only within butterflyArea
+        const nextCell = currentCell.nextElementSibling;
+        if (nextCell && butterflyArea.includes(nextCell)) {
+            console.log('Moved RIGHT');
+            nextCell.appendChild(butterflyInBubble);
+        }
+    }
 }
 
 document.addEventListener('keydown', movement);
