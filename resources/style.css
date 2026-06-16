@@ -406,6 +406,10 @@ header {
     margin-bottom: 1rem;
 }
 
+.github a:hover {
+    font-size: 1.75rem;
+}
+
 .projects p {
     padding: 0 1rem;
 }
@@ -1000,7 +1004,6 @@ footer h4 {
 }
 
 footer p {
-    font-size: 1.2rem;
     width: auto;
     max-width: 90%;
     text-align: center;
@@ -1008,18 +1011,23 @@ footer p {
 }
 
 footer p a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: rgb(72, 1, 138);
     background-color: rgb(250, 234, 11);
     padding: 0.5rem 1rem;
     border-radius: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
     font-weight: 600;
-    transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+    min-height: 2.5rem;
+    transition: font-size .2s ease, box-shadow .3s ease, background-color .3s ease;
 }
 
 footer p a:hover {
-    transform: translateY(-2px);
+    font-size: 1.4rem;
     box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
